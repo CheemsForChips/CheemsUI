@@ -1,0 +1,2 @@
+dotnet new console -o C:\Users\32480\Desktop\CheemsUI
+（dotnet new console -o +文件的地址就行）
