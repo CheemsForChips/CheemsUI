@@ -1,16 +1,9 @@
-﻿using UIPanel;
-namespace cheemsWinTool
-{
-    public class Program
+﻿    public class Program
     {
         [STAThread]
         public static void Main()
         {
-            RoundForm roundForm = new RoundForm();
-            roundForm.InitializeComponent();
-
-            Application.Run(roundForm);
+            Console.WriteLine("start顺利启动！");
+            Application.Run(RoundForm.GetInstance());
         }
-
     }
-}

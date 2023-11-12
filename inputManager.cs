@@ -8,7 +8,7 @@ public class mouseInput:Control{
         SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
         SetStyle(ControlStyles.ResizeRedraw, true);
         SetStyle(ControlStyles.UserPaint, true);
-    }
+    } 
     protected override void OnMouseMove(MouseEventArgs e)
     {
         base.OnMouseMove(e);
@@ -27,7 +27,7 @@ public class mouseInput:Control{
         int newSegment = (int)(angle / roundFormInstance.segmentAngle);
         if (newSegment != roundFormInstance.segmentAngle)
         {
-            eventManagerInstance.triggerHandler();
+            eventManagerInstance.CheemsStringDelegate(newSegment);
             Invalidate(); // 重绘控件
         }
     }

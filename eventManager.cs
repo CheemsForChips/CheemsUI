@@ -6,6 +6,7 @@ public class EventManager{
     private EventManager(){
         //构造函数
         Console.WriteLine("EventManager is created");
+        CheemsStringDelegate += showSelectedAction;
     }
     public static EventManager GetInstance(){
         if(eventManagerInstance == null){
@@ -14,15 +15,12 @@ public class EventManager{
         return eventManagerInstance;
     }
 
-    
     // 事件
-    delegate void SelectionChangedEventHandler(int index);
+    public delegate void SelectedToString(int index);
+    public SelectedToString CheemsStringDelegate  = null;
     //方法
-    public void showSelectedAction(int index){
+    public static void showSelectedAction(int index){
         Console.WriteLine("Selected segment: {0}", index);
     }
-    public void triggerHandler(){
-        SelectionChangedEventHandler handler = new SelectionChangedEventHandler(showSelectedAction);
-        handler(1);
-    }
+
 }

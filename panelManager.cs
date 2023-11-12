@@ -4,7 +4,7 @@ using Microsoft.VisualBasic;
 using System.Drawing.Drawing2D;
 
 public class RoundForm:Form{
-    #region 轮盘显示效果的具体参数
+    #region 参数设置
     public bool isFormMaximized = true;//是否最大化
     public int[] defaultSize = new int[2] { 300, 600 };//默认form大小 最大化后大小设置失效        public bool isFormBorderActive = false;//是否显示边框
     public double formOpacity = 0.7f;//窗体透明度        
@@ -18,7 +18,8 @@ public class RoundForm:Form{
                                             Color.Violet, Color.Purple};
     static public Color selectedSegmentColor = Color.White;
     #endregion
-
+    #region 单例模式 私有构造函数
+    //构造函数
     private static RoundForm roundFormInstance;
     public static RoundForm GetInstance(){
         if(roundFormInstance == null){
@@ -27,11 +28,10 @@ public class RoundForm:Form{
         return roundFormInstance;
 
     }
-    
-    //构造函数
     private RoundForm(){
         }
-
+    #endregion
+    #region 窗体的具体效果实现
     protected override void OnPaint(PaintEventArgs e)
     {
         base.OnPaint(e);
@@ -70,4 +70,5 @@ public class RoundForm:Form{
         }
 
     }
+    #endregion
 }
