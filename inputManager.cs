@@ -1,18 +1,23 @@
 public class mouseInput:Control{
-    //获取到控件的实例
-    private RoundForm roundFormInstance=RoundForm.GetInstance();
-    private EventManager eventManagerInstance = EventManager.GetInstance();
-    private static mouseInput mouseInputInstance;
+    #region 单例模式 私有构造函数
+    private static mouseInput mouseInputInstance=new mouseInput();
     private mouseInput(){
         Console.WriteLine("mouseInputInstance is created");
         SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
         SetStyle(ControlStyles.ResizeRedraw, true);
         SetStyle(ControlStyles.UserPaint, true);
-    } 
+    }
+    public static mouseInput GetInstance(){
+        if(mouseInputInstance == null){
+            mouseInputInstance = new mouseInput();
+        }
+        return mouseInputInstance;
+    }
+    #endregion
     protected override void OnMouseMove(MouseEventArgs e)
     {
+        Console.WriteLine("OnMouseMove is called");
         base.OnMouseMove(e);
-
         // 计算鼠标相对于控件中心的角度
         Point center = new Point(ClientSize.Width / 2, ClientSize.Height / 2);
         float dx = e.X - center.X;
@@ -22,13 +27,14 @@ public class mouseInput:Control{
         {
             angle += 360;
         }
-
         // 根据角度计算当前选中的区块索引
-        int newSegment = (int)(angle / roundFormInstance.segmentAngle);
-        if (newSegment != roundFormInstance.segmentAngle)
+        int newSegment = (int)(angle / RoundForm.GetInstance().segmentAngle);//roundFormInstance.segmentAngle
+        if (newSegment != RoundForm.GetInstance().segmentAngle)
         {
-            eventManagerInstance.CheemsStringDelegate(newSegment);
+            EventManager.GetInstance().CheemsStringDelegate(newSegment);
             Invalidate(); // 重绘控件
         }
     }
+
+    
 }
