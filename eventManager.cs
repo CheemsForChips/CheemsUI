@@ -4,7 +4,6 @@ public class EventManager{
     private EventManager(){
         //构造函数
         Console.WriteLine("EventManagerInstance is created");
-        CheemsStringDelegate += showSelectedAction;
     }
     public static EventManager GetInstance(){
         if(eventManagerInstance == null){
@@ -12,12 +11,30 @@ public class EventManager{
         }
         return eventManagerInstance;
     }
-    // 事件
+    #region 传入选择的区块编号的委托
     public delegate void SelectedToString(int index);
     public SelectedToString CheemsStringDelegate  = null;
-    //方法
     public static void showSelectedAction(int index){
-        Console.WriteLine("Selected segment: {0}", index);
-    }
+        Label textLabel = new Label();
+        textLabel.Text = index.ToString();
+        textLabel.Font = new Font("微软雅黑", 20, FontStyle.Bold);
 
+        textLabel.AutoSize = true;
+        textLabel.Location = new Point(0, 0);
+        textLabel.BackColor = Color.Transparent;
+        textLabel.ForeColor = Color.White;
+        textLabel.Parent = RoundForm.GetInstance();
+        textLabel.BringToFront();
+        textLabel.Show();
+        
+    }
+    #endregion
+
+    #region 退出程序的委托
+    public delegate void ExitApplication();
+    public ExitApplication CheemsExitApplicationDelegate = null;
+    public static void applicationExit(){
+        Application.Exit();
+    }
+    #endregion
 }
