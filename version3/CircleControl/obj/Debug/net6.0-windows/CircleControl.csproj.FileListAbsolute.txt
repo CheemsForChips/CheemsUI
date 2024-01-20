@@ -1,13 +1,14 @@
-C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.exe
-C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.deps.json
-C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.runtimeconfig.json
-C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.dll
-C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.pdb
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.csproj.ResolveComReference.cache
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl_MarkupCompile.cache
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl_MarkupCompile.lref
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.exe
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.deps.json
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.runtimeconfig.json
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.dll
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\CircleControl.pdb
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\Themes\Generic.baml
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.g.resources
@@ -21,3 +22,7 @@ C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.pdb
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.genruntimeconfig.cache
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\ref\CircleControl.dll
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl_Content.g.cs
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\ICON.resx
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.ICON.resources
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.csproj.GenerateResource.cache

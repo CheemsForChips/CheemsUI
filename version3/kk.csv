@@ -1,0 +1,17 @@
+﻿WindowInfo,WindowInfo.Hwnd,WindowInfo.ClassName,WindowInfo.Title,WindowInfo.IsVisible,WindowInfo.Bounds,WindowInfo.IsMinimized
+Walterlv.WindowDetector.WindowInfo,1444030,HwndWrapper[CircleControl;;abcd78d1-790f-46a8-9315-7c7b0137ba89],MainWindow,True,"{X=0,Y=0,Width=2880,Height=1800}",False
+Walterlv.WindowDetector.WindowInfo,2034290,HwndWrapper[DefaultDomain;;6c122961-feb0-44bd-89c0-daac84be590a],"CircleControl (正在运行) - Microsoft Visual Studio",True,"{X=-13,Y=-13,Width=2906,Height=1826}",False
+Walterlv.WindowDetector.WindowInfo,461262,ApplicationFrameWindow,计算器,True,"{X=1783,Y=714,Width=779,Height=1029}",False
+Walterlv.WindowDetector.WindowInfo,2818464,Chrome_WidgetWin_1,"who are you - Your Personalized AI Assistant. 和另外 5 个页面 - 个人 - Microsoft? Edge",True,"{X=-13,Y=-13,Width=2906,Height=1826}",False
+Walterlv.WindowDetector.WindowInfo,3606448,OpusApp,"实验报告.docx - Word",True,"{X=-32000,Y=-32000,Width=83,Height=28}",True
+Walterlv.WindowDetector.WindowInfo,5636976,Windows.UI.Core.CoreWindow,"Microsoft Text Input Application",True,"{X=0,Y=0,Width=2880,Height=1800}",False
+Walterlv.WindowDetector.WindowInfo,590928,Windows.UI.Core.CoreWindow,媒体播放器,True,"{X=0,Y=1,Width=1000,Height=664}",False
+Walterlv.WindowDetector.WindowInfo,1310874,ApplicationFrameWindow,媒体播放器,True,"{X=1483,Y=0,Width=1053,Height=678}",False
+Walterlv.WindowDetector.WindowInfo,3212894,Windows.UI.Core.CoreWindow,设置,True,"{X=0,Y=13,Width=2880,Height=1800}",False
+Walterlv.WindowDetector.WindowInfo,459928,ApplicationFrameWindow,设置,True,"{X=-13,Y=-13,Width=2906,Height=1826}",False
+Walterlv.WindowDetector.WindowInfo,788472,Windows.UI.Core.CoreWindow,"Windows Shell Experience 主机",True,"{X=0,Y=0,Width=1,Height=1}",False
+Walterlv.WindowDetector.WindowInfo,1443342,TXGuiFoundation,081-朱佳宇等107个会话,True,"{X=-32000,Y=-32000,Width=83,Height=28}",True
+Walterlv.WindowDetector.WindowInfo,2558802,CabinetWClass,FPGA,True,"{X=-32000,Y=-32000,Width=83,Height=28}",True
+Walterlv.WindowDetector.WindowInfo,1707180,CabinetWClass,MSP430,True,"{X=-32000,Y=-32000,Width=83,Height=28}",True
+Walterlv.WindowDetector.WindowInfo,5309392,WeChatMainWndForPC,微信,True,"{X=-32000,Y=-32000,Width=1400,Height=1604}",True
+Walterlv.WindowDetector.WindowInfo,132182,Progman,"Program Manager",True,"{X=0,Y=0,Width=2880,Height=1800}",False

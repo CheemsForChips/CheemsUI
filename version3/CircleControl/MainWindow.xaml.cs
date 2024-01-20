@@ -1,15 +1,16 @@
-﻿using System.Configuration;
-using System.Text;
-using System.Drawing.Drawing2D;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Runtime.InteropServices;
+using System.Windows.Interop;
+using Walterlv.WindowDetector;
+using System.Windows.Forms;
+using Color = System.Windows.Media.Color;
+using MouseEventArgs = System.Windows.Input.MouseEventArgs;
+using Point = System.Windows.Point;
+
+
+
 
 namespace CircleControl
 {
@@ -34,9 +35,11 @@ namespace CircleControl
 
         public MainWindow()
         {
+
             InitializeComponent();
             this.DataContext = this;
-        }
+        } 
+
 
         /// <summary>
         /// 旋转鼠标标记控件
@@ -90,6 +93,13 @@ namespace CircleControl
                     UtilityModel.GetUtilityModelInstance().ExecuteCommand("taskmgr");
                     break;
                 case 1:
+                    // 获取所有打开的窗口
+                    var windows = WindowEnumerator.FindAll();
+
+                    var exWindow = windows[2];
+
+                    UtilityModel.GetUtilityModelInstance().ToggleWindowTopMost(exWindow.Hwnd);
+
                     break;
                 case 2:
                     break;

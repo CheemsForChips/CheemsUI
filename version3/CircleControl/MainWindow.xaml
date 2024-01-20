@@ -11,15 +11,17 @@
         ResizeMode="NoResize"
         WindowState="Maximized"
         AllowsTransparency="True"
-        Background="#CC888888">
+        Background="#CC888888"
+        
+        
+        xmlns:tb="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolbox"
+        xmlns:tb1="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        >
+
 
     <Grid>
-        <local:SectorButton x:Name="Arc6" Width="200" Height="200" Margin="445,144,255,541"  
-                            
-                            />
-        <local:SectorButton x:Name="Arc7" Width="200" Height="200" Margin="551,270,149,415" RenderTransformOrigin="0.5,0.5"
-                            
-                            >
+        <local:SectorButton x:Name="Arc6" Width="200" Height="200" Margin="445,144,255,541"   />
+        <local:SectorButton x:Name="Arc7" Width="200" Height="200" Margin="551,270,149,415" RenderTransformOrigin="0.5,0.5" >
             <local:SectorButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -30,8 +32,8 @@
             </local:SectorButton.RenderTransform>
         </local:SectorButton>
         <local:SectorButton x:Name="Arc0" Width="200" Height="200" Margin="537,436,163,249" RenderTransformOrigin="0.5,0.5"
-                          
-                             >
+                      
+                         >
             <local:SectorButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -42,8 +44,8 @@
             </local:SectorButton.RenderTransform>
         </local:SectorButton>
         <local:SectorButton x:Name="Arc1" Width="200" Height="200" Margin="409,543,291,142" RenderTransformOrigin="0.5,0.5"
-                     
-                            >
+                 
+                        >
             <local:SectorButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -54,8 +56,8 @@
             </local:SectorButton.RenderTransform>
         </local:SectorButton>
         <local:SectorButton x:Name="Arc2" Width="200" Height="200" Margin="243,528,457,157" RenderTransformOrigin="0.5,0.5"
-                           
-                            >
+                       
+                        >
             <local:SectorButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -66,8 +68,8 @@
             </local:SectorButton.RenderTransform>
         </local:SectorButton>
         <local:SectorButton x:Name="Arc3" Width="200" Height="200" Margin="137,401,563,284" RenderTransformOrigin="0.5,0.5"
-                           
-                            >
+                       
+                        >
             <local:SectorButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -78,8 +80,8 @@
             </local:SectorButton.RenderTransform>
         </local:SectorButton>
         <local:SectorButton x:Name="Arc4" Width="200" Height="200" Margin="151,236,549,449" RenderTransformOrigin="0.5,0.5"
-                            
-                            >
+                        
+                        >
             <local:SectorButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -90,7 +92,7 @@
             </local:SectorButton.RenderTransform>
         </local:SectorButton>
         <local:SectorButton x:Name="Arc5" Width="200" Height="200" Margin="279,128,421,557" RenderTransformOrigin="0.5,0.5"
-                            >
+                        >
             <local:SectorButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -105,4 +107,5 @@
         <TextBlock x:Name="UtilityTextShow" Text="CheemsShow" Margin="331,384,331,384" Background="Transparent"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
 
     </Grid>
+
 </Window>
