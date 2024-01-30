@@ -10,6 +10,7 @@
 //------------------------------------------------------------------------------
 
 using CircleControl;
+using NHotkey.Wpf;
 using System;
 using System.Diagnostics;
 using System.Windows;

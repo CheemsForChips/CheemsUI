@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BB2rRX46nQ5PE5p8vsgY8AuBRn9ZLmmyrSQDd0RqvcY8Gtm1zbF6sSeA4Qv4FEJiArds65j5+ZQ8Y6/YT1vs1g==",
+  "dgSpecHash": "3E8l1IPGDDtnqLUxXsjGHrlvvGb8VPanoc1mO4gzxVOLL3GSxUYWATK/V/yJm2me7Xn/EtlJT2L8oI9DAInQ2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\32480\\Desktop\\CheemsUI\\version3\\CircleControl\\CircleControl.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\32480\\.nuget\\packages\\nhotkey\\2.1.1\\nhotkey.2.1.1.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\nhotkey.wpf\\2.1.1\\nhotkey.wpf.2.1.1.nupkg.sha512",
     "C:\\Users\\32480\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
     "C:\\Users\\32480\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
     "C:\\Users\\32480\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",

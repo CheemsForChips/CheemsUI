@@ -26,3 +26,7 @@ C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\ICON.resx
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.ICON.resources
 C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.csproj.GenerateResource.cache
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\NHotkey.dll
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\bin\Debug\net6.0-windows\NHotkey.Wpf.dll
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.csproj.AssemblyReference.cache
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net6.0-windows\CircleControl.csproj.CopyComplete

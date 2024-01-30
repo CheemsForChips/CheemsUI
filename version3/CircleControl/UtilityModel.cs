@@ -12,6 +12,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using Walterlv.WindowDetector;
 
+
 namespace CircleControl
 {
     class UtilityModel
@@ -109,6 +110,7 @@ namespace CircleControl
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern IntPtr GetWindowLongPtr(IntPtr hWnd, int nIndex);
+
 
     }
 }

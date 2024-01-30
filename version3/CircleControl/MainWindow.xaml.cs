@@ -4,10 +4,12 @@ using System.Windows.Media;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using Walterlv.WindowDetector;
-using System.Windows.Forms;
+using NHotkey.Wpf;
 using Color = System.Windows.Media.Color;
 using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 using Point = System.Windows.Point;
+using System.Reflection.Metadata;
+using NHotkey;
 
 
 
@@ -33,12 +35,89 @@ namespace CircleControl
         public static SolidColorBrush SelectedSectorColor= new SolidColorBrush(Color.FromArgb(0xFF, 0xE0, 0xDF, 0xC0));
 
 
+
+
+
+
+
+
+        private NotifyIcon _notifyIcon = null;
         public MainWindow()
         {
 
             InitializeComponent();
             this.DataContext = this;
-        } 
+            InitialTray(); //一启动就最小化至托盘
+
+
+            //hotkey注册
+            HotkeyManager.Current.AddOrReplace("Increment", Key.Space,  ModifierKeys.Alt, OnIncrement);
+        }
+
+
+
+        private void OnIncrement(object sender, HotkeyEventArgs e)
+        {
+            System.Windows.MessageBox.Show("成功启用热键！");
+        }
+
+        #region 最小化系统托盘
+        private void InitialTray()
+        {
+            //隐藏主窗体
+            this.Visibility = Visibility.Hidden;
+            //设置托盘的各个属性
+            _notifyIcon = new NotifyIcon();
+            _notifyIcon.BalloonTipText = "CheemsUI运行中...";//托盘气泡显示内容
+            _notifyIcon.Text = "CheemsUI";
+            _notifyIcon.Visible = true;//托盘按钮是否可见
+            _notifyIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
+            _notifyIcon.ShowBalloonTip(2000);//托盘气泡显示时间
+            _notifyIcon.MouseClick+=notifyIcon_MouseClick;
+            //窗体状态改变时触发
+            this.StateChanged += MainWindow_StateChanged;
+        }
+        #endregion
+
+        #region 窗口状态改变
+        private void MainWindow_StateChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == WindowState.Minimized)
+            {
+                this.Visibility = Visibility.Hidden;
+            }
+        }
+        #endregion
+
+        #region 托盘图标鼠标单击事件
+        private void notifyIcon_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (this.Visibility == Visibility.Visible)
+                {
+                    this.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    this.Visibility = Visibility.Visible;
+                    this.Activate();
+                }
+            }
+        }
+        #endregion
+
+
+ 
+
+
+
+
+
+
+
+
+
 
 
         /// <summary>
@@ -47,6 +126,7 @@ namespace CircleControl
         /// <param name="e"></param>
         protected override void OnMouseMove(MouseEventArgs e)
         {
+           
             base.OnMouseMove(e);
 
             Point center = new Point(ActualWidth / 2, ActualHeight / 2);

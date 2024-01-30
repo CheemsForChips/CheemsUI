@@ -1,0 +1,12 @@
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\bin\Debug\net6.0\PluginInfo.deps.json
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\bin\Debug\net6.0\PluginInfo.dll
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\bin\Debug\net6.0\PluginInfo.pdb
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\obj\Debug\net6.0\PluginInfo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\obj\Debug\net6.0\PluginInfo.AssemblyInfoInputs.cache
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\obj\Debug\net6.0\PluginInfo.AssemblyInfo.cs
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\obj\Debug\net6.0\PluginInfo.csproj.CoreCompileInputs.cache
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\obj\Debug\net6.0\PluginInfo.sourcelink.json
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\obj\Debug\net6.0\PluginInfo.dll
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\obj\Debug\net6.0\refint\PluginInfo.dll
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\obj\Debug\net6.0\PluginInfo.pdb
+C:\Users\32480\Desktop\CheemsUI\version3\PluginInfo\obj\Debug\net6.0\ref\PluginInfo.dll

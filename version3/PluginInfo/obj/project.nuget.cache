@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "3JhKuxzZzpl5Hr1tC9/fJmaLR69TukXFh0P2jMazZ/AM2VcCNz0wGsmFqUxMO3qIyCWChmsmprwZ4ag576SRLA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\32480\\Desktop\\CheemsUI\\version3\\PluginInfo\\PluginInfo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\32480\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
