@@ -1,0 +1,111 @@
+﻿<pu:WindowX x:Class="CircleControl.Setting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CircleControl"
+        mc:Ignorable="d"
+        Loaded="settingWindowLoad"
+        xmlns:dd="urn:gong-wpf-dragdrop"
+        xmlns:pu="https://opensource.panuon.com/wpf-ui"
+        xmlns:markdig="clr-namespace:Markdig.Wpf;assembly=Markdig.Wpf"
+        pu:WindowXCaption.Height="0"
+        Background="#FAFAFA"
+        Title="Setting" Height="450" Width="800">
+    <pu:WindowX.Resources>
+        <local:MainWindow x:Key="mainWindowRes"/>
+
+    </pu:WindowX.Resources>
+    <Grid>
+        <TabControl TabStripPlacement="Left"
+            Background="Transparent"
+            pu:TabControlHelper.ItemsHeight="60"
+            pu:TabControlHelper.ItemsWidth="60"
+            BorderThickness="0"
+            pu:WindowX.IsDragMoveArea="True"
+            pu:TabControlHelper.HeaderPanelBorderThickness="1"
+            pu:TabControlHelper.HeaderPanelBorderBrush="#E0E0E0"
+            
+            pu:TabControlHelper.ItemsForeground="#AAAAAA"
+            pu:TabControlHelper.ItemsHoverBackground="{x:Null}"
+            pu:TabControlHelper.ItemsSelectedBackground="{x:Null}"
+            pu:TabControlHelper.ItemsSelectedForeground="Black"
+            pu:TabControlHelper.ItemsFontSize="18"
+            pu:TabControlHelper.ItemsFontFamily="pack://application:,,,/Resources/fontIcon/#IconFont">
+            <TabItem Header="&#xe61d;" 
+                     pu:IconHelper.FontSize="30" 
+                     pu:IconHelper.Foreground="Black"
+                     >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Background="#FFF7F7F7">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="0.5*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="Resources/fontIcon/machineAIGirl.jpg"/>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.5*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <markdig:MarkdownViewer Grid.Column="0" x:Name="utilityViewMarkdown"/>
+                            <TextBlock x:Name="showPluginUtility" Text="AAAA" Grid.Column="1" Margin="5,10,5,10" Foreground="#AAAAAA" FontSize="15" 
+                               VerticalAlignment="Center"
+                               TextWrapping="Wrap"
+                               />
+                        </Grid>
+                    </Grid>
+                    <ListBox x:Name="mListBox" Grid.Column="1"
+                     SelectionMode="Single"
+                     dd:DragDrop.IsDragSource="True"
+                     dd:DragDrop.IsDropTarget="True"
+                     >
+                        <ListBox.ItemContainerStyle>
+                            <Style x:Name="ListBoxItemStyle" TargetType="ListBoxItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListBoxItem">
+                                            <Grid>
+                                                <Button Content="{Binding Path=pluginName}"
+                                             Margin="2,2,2,2" Height="50" Width="220"
+                                             pu:ButtonHelper.CornerRadius="8"
+                                             Foreground="#AAAAAA"
+                                             pu:IconHelper.FontFamily="pack://application:,,,/Resources/fontIcon/#IconFont"
+                                             pu:ButtonHelper.Icon="{Binding Path=headerIcon}"
+                                             pu:IconHelper.FontSize="18"
+                                             pu:ButtonHelper.ClickEffect="Shake"
+                                             pu:ButtonHelper.HoverForeground="Black"
+                                             pu:ButtonHelper.ShadowColor="LightGray" 
+                                             Click="listboxButtonClick"
+                                             MouseDoubleClick="shortCutClick"
+                                            />
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                    </ListBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="&#xe60b;" 
+                     pu:IconHelper.FontSize="30" 
+                     pu:IconHelper.Foreground="Black">
+                <markdig:MarkdownViewer x:Name="informationViewMarkDown"/>
+            </TabItem>
+
+        </TabControl>
+        <Button Background="Transparent" Width="60" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" 
+                Click="exitUtilityWindow"
+                >
+            <Button.Content>
+                <TextBlock Text="&#xe620;" Foreground="Black" FontFamily="pack://application:,,,/Resources/fontIcon/#IconFont" FontSize="17" />
+            </Button.Content>
+        </Button>
+    </Grid>
+    
+</pu:WindowX>

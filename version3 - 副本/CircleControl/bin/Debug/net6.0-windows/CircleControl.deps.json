@@ -1,0 +1,173 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CircleControl/1.0.0": {
+        "dependencies": {
+          "Markdig.Wpf": "0.5.0.1",
+          "MouseKeyHook": "5.7.1",
+          "NHotkey.Wpf": "2.1.1",
+          "Panuon.WPF.UI": "1.1.16.8",
+          "gong-wpf-dragdrop": "3.2.1",
+          "PluginBase": "1.0.0.0"
+        },
+        "runtime": {
+          "CircleControl.dll": {}
+        }
+      },
+      "gong-wpf-dragdrop/3.2.1": {
+        "runtime": {
+          "lib/net6.0-windows7.0/GongSolutions.WPF.DragDrop.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.2.1.12"
+          }
+        }
+      },
+      "Markdig/0.22.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/Markdig.dll": {
+            "assemblyVersion": "0.22.0.0",
+            "fileVersion": "0.22.0.0"
+          }
+        }
+      },
+      "Markdig.Wpf/0.5.0.1": {
+        "dependencies": {
+          "Markdig": "0.22.0"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Markdig.Wpf.dll": {
+            "assemblyVersion": "0.5.0.1",
+            "fileVersion": "0.5.0.1"
+          }
+        }
+      },
+      "MouseKeyHook/5.7.1": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Gma.System.MouseKeyHook.dll": {
+            "assemblyVersion": "5.7.1.0",
+            "fileVersion": "5.7.1.0"
+          }
+        }
+      },
+      "NHotkey/2.1.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/NHotkey.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.1.0"
+          }
+        }
+      },
+      "NHotkey.Wpf/2.1.1": {
+        "dependencies": {
+          "NHotkey": "2.1.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/NHotkey.Wpf.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.1.0"
+          }
+        }
+      },
+      "Panuon.WPF/1.0.3": {
+        "runtime": {
+          "lib/net6.0-windows/Panuon.WPF.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        }
+      },
+      "Panuon.WPF.UI/1.1.16.8": {
+        "dependencies": {
+          "Panuon.WPF": "1.0.3"
+        },
+        "runtime": {
+          "lib/net6.0-windows/Panuon.WPF.UI.dll": {
+            "assemblyVersion": "1.1.16.8",
+            "fileVersion": "1.1.16.8"
+          }
+        }
+      },
+      "PluginBase/1.0.0.0": {
+        "runtime": {
+          "PluginBase.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CircleControl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "gong-wpf-dragdrop/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-duqBiOHQobupqRdbLYcr+8BQeeuHkvPDHQs9lnLZ03sYkmJbk5ApXqgUfx7hPP7tN9qopFQKl6OlYIHixnI1iw==",
+      "path": "gong-wpf-dragdrop/3.2.1",
+      "hashPath": "gong-wpf-dragdrop.3.2.1.nupkg.sha512"
+    },
+    "Markdig/0.22.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/GbIsc1Dc/fOPqJM2sWIlWymgRAVfJhet+MY1Ze46HpDMyl+9TTfs4AdYbXx5QZo7eRh+Ew7A/nyGSVNCuYd9g==",
+      "path": "markdig/0.22.0",
+      "hashPath": "markdig.0.22.0.nupkg.sha512"
+    },
+    "Markdig.Wpf/0.5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lQRxu90ZqCATHTvd25yR/MxXABYA+Xcp7tmKW5jReTIgegB+AcU0+cd1GqdpM5k2KRVaD8BkBYQFdDw0lquT4w==",
+      "path": "markdig.wpf/0.5.0.1",
+      "hashPath": "markdig.wpf.0.5.0.1.nupkg.sha512"
+    },
+    "MouseKeyHook/5.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c0VhB6cbcOpMOcoCQmvPMVqxaH76S4IPHwpbCIY7XKUNimdj9+81rX+Evnu5O53xYgUvdD7g0qmlVeZP2wGCnA==",
+      "path": "mousekeyhook/5.7.1",
+      "hashPath": "mousekeyhook.5.7.1.nupkg.sha512"
+    },
+    "NHotkey/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LLjgy7CUEgZN6zyEjJmpNUrz5jkeKahd34j5Ys2pImjilRPlZFWRRr8yiqywWsRe8p1WfVsLcvdutjiwPBHEpg==",
+      "path": "nhotkey/2.1.1",
+      "hashPath": "nhotkey.2.1.1.nupkg.sha512"
+    },
+    "NHotkey.Wpf/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3jbacG/62j0/BsviuVl0IIDa73pbzoKjcdK6o6umKgImB7vwMWm7+eh7Dorb8ebrJ8A7HE/XMwgVMXgmSFr+IQ==",
+      "path": "nhotkey.wpf/2.1.1",
+      "hashPath": "nhotkey.wpf.2.1.1.nupkg.sha512"
+    },
+    "Panuon.WPF/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l+QaGbOyxH4O/SBujqPPAP5iWzim/NY6yUpJJKF52iuabGZSl7FJFIQ7SakTUXX7ka/CGgDai6Q400Ymkn/jew==",
+      "path": "panuon.wpf/1.0.3",
+      "hashPath": "panuon.wpf.1.0.3.nupkg.sha512"
+    },
+    "Panuon.WPF.UI/1.1.16.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-64TBdozoWvzQK2xP1sF+RczZP7BLiIPDKVA6JbF0iTgj7/ehW/GmsMAEMhJjp6qUCM79/xI+7sfZKyU4oQjlAw==",
+      "path": "panuon.wpf.ui/1.1.16.8",
+      "hashPath": "panuon.wpf.ui.1.1.16.8.nupkg.sha512"
+    },
+    "PluginBase/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

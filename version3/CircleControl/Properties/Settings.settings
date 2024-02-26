@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CircleControl.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="sector8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="sector9" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="shortCut2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="shortCut3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="shortCut4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="shortCut5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="shortCut6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="shortCut7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="sector0" Type="System.String" Scope="User">
+      <Value Profile="(Default)">划词翻译</Value>
+    </Setting>
+    <Setting Name="sector1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">窗口置顶</Value>
+    </Setting>
+    <Setting Name="sector2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">任务管理器</Value>
+    </Setting>
+    <Setting Name="sector3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">一键休眠</Value>
+    </Setting>
+    <Setting Name="sector4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">浏览器搜索</Value>
+    </Setting>
+    <Setting Name="sector5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">文件夹打开</Value>
+    </Setting>
+    <Setting Name="sector6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">计算器</Value>
+    </Setting>
+    <Setting Name="sector7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">shortCut1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

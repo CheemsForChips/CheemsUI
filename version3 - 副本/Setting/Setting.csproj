@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Document\About.md" />
+    <None Remove="Resource\american-sign-langua.svg" />
+    <None Remove="Resource\cog.svg" />
+    <None Remove="Resource\iconfont.ttf" />
+    <None Remove="Resource\machineAIGirl.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Markdig.Wpf" Version="0.5.0.1" />
+    <PackageReference Include="Panuon.WPF.UI" Version="1.1.16.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PluginBase">
+      <HintPath>..\PluginBase\bin\Debug\net6.0\PluginBase.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Document\About.md" />
+    <Resource Include="Resource\iconfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resource\machineAIGirl.jpg" />
+  </ItemGroup>
+
+</Project>

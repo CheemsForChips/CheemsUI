@@ -1,0 +1,46 @@
+﻿<pu:WindowX x:Class="CircleControl.InputShortCut"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CircleControl"
+        xmlns:pu="https://opensource.panuon.com/wpf-ui"
+        pu:WindowXCaption.Height="0"
+        pu:WindowX.IsDragMoveArea="True"
+        mc:Ignorable="d"
+        Title="InputShortCut" Height="100" Width="250">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="   输入路径：" VerticalAlignment="Center"/>
+        <Button Content="确认"
+                FontSize="10"
+                Grid.Row="0" HorizontalAlignment="Right" Background="Gray" Opacity="0.5" 
+                Height="20" Width="50" Margin="0,0,10,0"
+                pu:ButtonHelper.HoverForeground="LightBlue"
+                pu:ButtonHelper.ClickBackground="LightGray"
+                pu:ButtonHelper.ShadowColor="LightGray" 
+                pu:ButtonHelper.CornerRadius="4"
+                pu:IconHelper.FontFamily="pack://application:,,,/Resources/fontIcon/#IconFont"
+                pu:ButtonHelper.Icon="&#xe606;"
+                Click="shortCutPath"
+                />
+        <TextBox 
+         x:Name="PathTextBox"
+         Grid.Row="1"
+         Height="40"
+         Width="200"
+         pu:TextBoxHelper.Watermark="Input your shortcut location"
+         pu:TextBoxHelper.CornerRadius="4"
+         pu:TextBoxHelper.FocusedForeground="LightBlue"
+         pu:TextBoxHelper.FocusedBorderBrush="LightBlue"
+         pu:TextBoxHelper.FocusedShadowColor="#36AAF7"
+         pu:ShadowHelper.Opacity="0.5"
+         pu:ShadowHelper.BlurRadius="15"
+         pu:ShadowHelper.ShadowDepth="5">
+        </TextBox>
+
+    </Grid>
+</pu:WindowX>

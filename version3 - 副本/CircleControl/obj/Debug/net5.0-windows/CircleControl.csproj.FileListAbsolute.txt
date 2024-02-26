@@ -1,0 +1,6 @@
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net5.0-windows\CircleControl.csproj.ResolveComReference.cache
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net5.0-windows\CircleControl_MarkupCompile.cache
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net5.0-windows\CircleControl_MarkupCompile.lref
+C:\Users\32480\Desktop\CheemsUI\version3\CircleControl\obj\Debug\net5.0-windows\MainWindow.g.cs

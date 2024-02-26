@@ -1,0 +1,79 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Markdig/0.22.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/Markdig.dll": {
+            "assemblyVersion": "0.22.0.0",
+            "fileVersion": "0.22.0.0"
+          }
+        }
+      },
+      "Markdig.Wpf/0.5.0.1": {
+        "dependencies": {
+          "Markdig": "0.22.0"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Markdig.Wpf.dll": {
+            "assemblyVersion": "0.5.0.1",
+            "fileVersion": "0.5.0.1"
+          }
+        }
+      },
+      "Panuon.WPF/1.0.3": {
+        "runtime": {
+          "lib/net6.0-windows/Panuon.WPF.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        }
+      },
+      "Panuon.WPF.UI/1.1.16.8": {
+        "dependencies": {
+          "Panuon.WPF": "1.0.3"
+        },
+        "runtime": {
+          "lib/net6.0-windows/Panuon.WPF.UI.dll": {
+            "assemblyVersion": "1.1.16.8",
+            "fileVersion": "1.1.16.8"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Markdig/0.22.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/GbIsc1Dc/fOPqJM2sWIlWymgRAVfJhet+MY1Ze46HpDMyl+9TTfs4AdYbXx5QZo7eRh+Ew7A/nyGSVNCuYd9g==",
+      "path": "markdig/0.22.0",
+      "hashPath": "markdig.0.22.0.nupkg.sha512"
+    },
+    "Markdig.Wpf/0.5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lQRxu90ZqCATHTvd25yR/MxXABYA+Xcp7tmKW5jReTIgegB+AcU0+cd1GqdpM5k2KRVaD8BkBYQFdDw0lquT4w==",
+      "path": "markdig.wpf/0.5.0.1",
+      "hashPath": "markdig.wpf.0.5.0.1.nupkg.sha512"
+    },
+    "Panuon.WPF/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l+QaGbOyxH4O/SBujqPPAP5iWzim/NY6yUpJJKF52iuabGZSl7FJFIQ7SakTUXX7ka/CGgDai6Q400Ymkn/jew==",
+      "path": "panuon.wpf/1.0.3",
+      "hashPath": "panuon.wpf.1.0.3.nupkg.sha512"
+    },
+    "Panuon.WPF.UI/1.1.16.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-64TBdozoWvzQK2xP1sF+RczZP7BLiIPDKVA6JbF0iTgj7/ehW/GmsMAEMhJjp6qUCM79/xI+7sfZKyU4oQjlAw==",
+      "path": "panuon.wpf.ui/1.1.16.8",
+      "hashPath": "panuon.wpf.ui.1.1.16.8.nupkg.sha512"
+    }
+  }
+}

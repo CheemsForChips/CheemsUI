@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <ApplicationIcon>ICON\start.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AppHotKey.cs" />
+    <Compile Remove="Plugin.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\appIcon.bmp" />
+    <None Remove="Resources\fontIcon\iconfont.ttf" />
+    <None Remove="Resources\fontIcon\machineAIGirl.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ICON\start.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="gong-wpf-dragdrop" Version="3.2.1" />
+    <PackageReference Include="Markdig.Wpf" Version="0.5.0.1" />
+    <PackageReference Include="MouseKeyHook" Version="5.7.1" />
+    <PackageReference Include="NHotkey.Wpf" Version="2.1.1" />
+    <PackageReference Include="Panuon.WPF.UI" Version="1.1.16.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PluginBase">
+      <HintPath>..\PluginBase\bin\Debug\net6.0\PluginBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SetOnTop">
+      <HintPath>..\SetOnTop\bin\Debug\net6.0\SetOnTop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\appIcon.bmp" />
+    <Resource Include="Resources\fontIcon\iconfont.ttf" />
+    <Resource Include="Resources\fontIcon\machineAIGirl.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ICON.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ICON.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ICON.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ICON.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -10,7 +10,9 @@ using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 using Point = System.Windows.Point;
 using System.Reflection.Metadata;
 using NHotkey;
-
+using Gma.System.MouseKeyHook;
+using PluginBase;
+using System.Collections.ObjectModel;
 
 
 
@@ -21,6 +23,12 @@ namespace CircleControl
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<pluginButton> pluginButtonInMainWindow=new ObservableCollection<pluginButton>();
+
+        public void receiveMessage(ObservableCollection<pluginButton> pluginButtons)
+        {
+            pluginButtonInMainWindow= pluginButtons;
+        }
         public static int SectorSegement;
         // a r g b先是透明通道 然后才是rgb注意区分
         public static SolidColorBrush[] UnselectedSectorColor = { new SolidColorBrush(Color.FromArgb(0xFF,0x1E, 0x96, 0xFC)),
@@ -34,45 +42,87 @@ namespace CircleControl
                                                                     };
         public static SolidColorBrush SelectedSectorColor= new SolidColorBrush(Color.FromArgb(0xFF, 0xE0, 0xDF, 0xC0));
 
-
-
-
-
-
-
-
+        // winform下的系统托盘控件
         private NotifyIcon _notifyIcon = null;
+        private ContextMenuStrip __ContextMenuStrip = null;
+
+        private IKeyboardMouseEvents myMouseHook;
         public MainWindow()
         {
 
             InitializeComponent();
             this.DataContext = this;
-            InitialTray(); //一启动就最小化至托盘
-
-
+            //一启动就最小化至托盘
+            InitialTray();
             //hotkey注册
-            HotkeyManager.Current.AddOrReplace("Increment", Key.Space,  ModifierKeys.Alt, OnIncrement);
+            HotkeyManager.Current.AddOrReplace("Increment", Key.Space, ModifierKeys.Alt, OnIncrement);
+            //mousehook注册
+            myMouseHook = Hook.GlobalEvents();
+            myMouseHook.MouseDoubleClick += MyMouseHook_MouseDoubleClick;
+
+
+            pluginButtonInMainWindow.Add(new pluginButton { pluginName = "一键休眠", pluginDescription = "选中该区块即可使电脑进入休眠模式", headerIcon = "\ue677", shortCutPath = "shutdown -h" });
+            //pluginButtonListBox.Add(new pluginButton { pluginName = "划词翻译", pluginDescription = "选词翻译", headerIcon = "\ue68a" });
+            pluginButtonInMainWindow.Add(new pluginButton { pluginName = "任务管理器", pluginDescription = "打开任务管理器", headerIcon = "\ue695", shortCutPath = "taskmgr" });
+            pluginButtonInMainWindow.Add(new pluginButton { pluginName = "窗口置顶", pluginDescription = "将窗口选中的窗口始终置顶", headerIcon = "\ue6a3" });
+            pluginButtonInMainWindow.Add(new pluginButton { pluginName = "浏览器搜索", pluginDescription = "选中词句之后，调用该区块功能实现快捷浏览器搜索", headerIcon = "\ue798" });
+            pluginButtonInMainWindow.Add(new pluginButton { pluginName = "文件夹打开", pluginDescription = "点击该区块即可打开文件夹", headerIcon = "\ue610", shortCutPath = "explorer Desktop" });
+            pluginButtonInMainWindow.Add(new pluginButton { pluginName = " 计算器", pluginDescription = " 计算器", headerIcon = "\ue79b", shortCutPath = "calc" });
+            pluginButtonInMainWindow.Add(new pluginButton { pluginName = "shortCut0", pluginDescription = "输入快捷方式的路径", headerIcon = "\ue60a" });
+            pluginButtonInMainWindow.Add(new pluginButton { pluginName = "shortCut1", pluginDescription = "输入快捷方式的路径", headerIcon = "\ue60a" });
         }
-
-
-
+        //鼠标双击事件
+        // https://github.com/gmamaladze/globalmousekeyhook
+        private void MyMouseHook_MouseDoubleClick(object? sender, System.Windows.Forms.MouseEventArgs e)
+        {
+           if(e.Button==MouseButtons.Middle)
+            {
+                //双击鼠标中键 显示主窗体
+                this.Visibility = Visibility.Visible;
+                //激活主窗体
+                this.Activate();
+            }
+        }
+        //hotkey触发事件
         private void OnIncrement(object sender, HotkeyEventArgs e)
         {
-            System.Windows.MessageBox.Show("成功启用热键！");
+            //双击鼠标中键 显示主窗体
+            this.Visibility = Visibility.Visible;
+            //激活主窗体
+            this.Activate();
         }
 
         #region 最小化系统托盘
         private void InitialTray()
         {
+            //右键菜单设置
+            __ContextMenuStrip = new ContextMenuStrip();
+            __ContextMenuStrip.Items.Add("设置");
+            __ContextMenuStrip.Items.Add("退出");
+            __ContextMenuStrip.ItemClicked += (sender, e) =>
+            {
+                if (e.ClickedItem.Text == "设置")
+                {
+                    Setting setting = new Setting();
+                    setting.sendMessage += receiveMessage;
+                    setting.ShowDialog();
+                }
+                else if (e.ClickedItem.Text == "退出")
+                {
+                    //关闭该程序所有的窗口
+                    System.Windows.Application.Current.Shutdown();
+                }
+            };
             //隐藏主窗体
             this.Visibility = Visibility.Hidden;
             //设置托盘的各个属性
             _notifyIcon = new NotifyIcon();
-            _notifyIcon.BalloonTipText = "CheemsUI运行中...";//托盘气泡显示内容
-            _notifyIcon.Text = "CheemsUI";
+            _notifyIcon.ContextMenuStrip = __ContextMenuStrip;//右键菜单关联到托盘控件
+            _notifyIcon.BalloonTipText = "CheemsToolkit已启动\n (alt+space或双击鼠标中键召唤)";//托盘气泡显示内容
+            _notifyIcon.Text = "CheemsToolKit";
             _notifyIcon.Visible = true;//托盘按钮是否可见
             _notifyIcon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Windows.Forms.Application.ExecutablePath);
-            _notifyIcon.ShowBalloonTip(2000);//托盘气泡显示时间
+            _notifyIcon.ShowBalloonTip(1000);//托盘气泡显示时间
             _notifyIcon.MouseClick+=notifyIcon_MouseClick;
             //窗体状态改变时触发
             this.StateChanged += MainWindow_StateChanged;
@@ -92,6 +142,7 @@ namespace CircleControl
         #region 托盘图标鼠标单击事件
         private void notifyIcon_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
         {
+            //鼠标左键的点击事件
             if (e.Button == MouseButtons.Left)
             {
                 if (this.Visibility == Visibility.Visible)
@@ -106,19 +157,6 @@ namespace CircleControl
             }
         }
         #endregion
-
-
- 
-
-
-
-
-
-
-
-
-
-
 
         /// <summary>
         /// 旋转鼠标标记控件
@@ -137,7 +175,7 @@ namespace CircleControl
             int newSegment = (int)(angle / 45);
             {
                 SectorSegement = newSegment;
-                UtilityTextShow.Text = newSegment.ToString();
+                UtilityTextShow.Text = pluginButtonInMainWindow[SectorSegement].pluginName.ToString();
             }
 
             for(int i = 0; i < 8; i++)
@@ -158,7 +196,6 @@ namespace CircleControl
             }
         }
 
-
         /// <summary>
         /// 点击鼠标 触发控件的事件
         /// </summary>
@@ -166,36 +203,19 @@ namespace CircleControl
         protected override void OnMouseDown(MouseButtonEventArgs e)
         {
             base.OnMouseDown(e);
-
-            switch(SectorSegement)
+            if (pluginButtonInMainWindow[SectorSegement].pluginName=="窗口置顶")
             {
-                case 0:
-                    UtilityModel.GetUtilityModelInstance().ExecuteCommand("taskmgr");
-                    break;
-                case 1:
-                    // 获取所有打开的窗口
-                    var windows = WindowEnumerator.FindAll();
-
-                    var exWindow = windows[2];
-
-                    UtilityModel.GetUtilityModelInstance().ToggleWindowTopMost(exWindow.Hwnd);
-
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    UtilityModel.GetUtilityModelInstance().ExitCircleControl();
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
+                UtilityModel.GetUtilityModelInstance().ExecuteSetWindowTop();
             }
-
+            else if (pluginButtonInMainWindow[SectorSegement].pluginName == "浏览器搜索")
+            {
+                UtilityModel.GetUtilityModelInstance().OpenBrowserSearch();
+            }
+            else
+            {
+                UtilityModel.GetUtilityModelInstance().ExecuteCommand(pluginButtonInMainWindow[SectorSegement].shortCutPath);
+            }
+            this.Visibility = Visibility.Hidden;
         }
 
     }

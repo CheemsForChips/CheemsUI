@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "8sqa1DbguKqJnAdFdyEv/vPOeCvhM18iCHhL5mD8ow3iEpNxzM8/zaqgCbttJQUJEqxu6GysUoPfN7A2kv4Log==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\32480\\Desktop\\CheemsUI\\version3\\Setting\\Setting.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\32480\\.nuget\\packages\\markdig\\0.22.0\\markdig.0.22.0.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\markdig.wpf\\0.5.0.1\\markdig.wpf.0.5.0.1.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\panuon.wpf\\1.0.3\\panuon.wpf.1.0.3.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\panuon.wpf.ui\\1.1.16.8\\panuon.wpf.ui.1.1.16.8.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\32480\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
